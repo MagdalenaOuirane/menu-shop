@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import ListItems from './Components/ListItems';
 import Header from './Components/Header';
+import ListItems from './Components/ListItems';
 import Item from './Components/Item';
 
 
@@ -27,7 +27,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header content={this.state.items} />
-        <ListItems />
+        <ListItems content={this.state.items} />
         <Item />
       </React.Fragment>
 
