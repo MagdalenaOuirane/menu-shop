@@ -1,16 +1,27 @@
 import React from 'react';
+import Item from './Item';
 
 
 const ListItems = (props) => {
+
+    const items = props.content.map(item => (
+        // eslint-disable-next-line react/jsx-no-undef
+        <Item
+            key={item.id}
+            name={item.name}
+            active={item.active}
+        />
+    ))
+
     return (
+        <div className="list">
+            <h1>Your order</h1>
 
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            <ul>
 
-        </ul>
-
+                {items}
+            </ul>
+        </div>
     );
 
 }
