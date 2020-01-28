@@ -8,8 +8,10 @@ const ListItems = (props) => {
         // eslint-disable-next-line react/jsx-no-undef
         <Item
             key={item.id}
+            id={item.id}
             name={item.name}
             active={item.active}
+            changeStatus={props.changeStatus}
         />
     ))
 
