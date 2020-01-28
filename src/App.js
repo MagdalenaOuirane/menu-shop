@@ -19,7 +19,20 @@ class App extends React.Component {
   }
 
 
+  handleChangeStatus = (id) => {
+    console.log(id);
 
+    const items = this.state.items.map(item => {
+      if (id === item.id) {
+        item.active = !item.active
+      }
+      return item
+    })
+
+    this.setState({
+      items: items
+    })
+  }
 
 
   render() {
@@ -27,7 +40,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header content={this.state.items} />
-        <ListItems content={this.state.items} />
+        <ListItems content={this.state.items} changeStatus={this.handleChangeStatus} />
         <Item />
       </React.Fragment>
 
