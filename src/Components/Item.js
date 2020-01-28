@@ -1,10 +1,15 @@
 import React from 'react';
 
-const Item = (props) => {
-    return (
-        <h1>menu</h1>
-    )
-}
+const Item = (props) => (
+
+    <div>
+        <li style={props.active ? { fontWeight: 'bold' } : { color: 'gray' }}
+            onClick={() => props.changeStatus(props.id)}
+
+        >{props.name}</li>
+
+    </div>
+)
 
 
 
