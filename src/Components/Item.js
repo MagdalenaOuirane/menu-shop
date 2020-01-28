@@ -3,7 +3,7 @@ import React from 'react';
 const Item = (props) => (
 
     <div>
-        <li style={props.active ? { fontWeight: 'bold' } : { color: 'gray' }}
+        <li className={props.active ? 'enabled' : 'disabled'}
             onClick={() => props.changeStatus(props.id)}
 
         >{props.name}</li>
@@ -13,7 +13,7 @@ const Item = (props) => (
 
 
 
-
+//style={props.active ? { fontWeight: 'bold' } : { color: 'gray' }}
 
 
 
