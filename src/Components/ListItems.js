@@ -5,7 +5,7 @@ import Item from './Item';
 const ListItems = (props) => {
 
     const items = props.content.map(item => (
-        // eslint-disable-next-line react/jsx-no-undef
+
         <Item
             key={item.id}
             id={item.id}
